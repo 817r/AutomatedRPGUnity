@@ -24,12 +24,18 @@ public class TimeSystem : MonoBehaviour
         {
             return new SimulationTime
             {
-                hour = instance.currentHour,
-                minute = instance.currentMinute,
-                second = (int)instance.currentSecond,
-                day = instance.currentDay,
-                month = instance.currentMonth,
-                year = instance.currentYear,
+                clock = new SimulationTimeClock
+                {
+                    hour = instance.currentHour,
+                    minute = instance.currentMinute,
+                    second = (int)instance.currentSecond
+                },
+                date = new SimulationTimeDate
+                {
+                    day = instance.currentDay,
+                    month = instance.currentMonth,
+                    year = instance.currentYear
+                },
                 seasonType = instance.currentSeason
             };
         }
@@ -122,11 +128,26 @@ public enum SeasonType
 [Serializable]
 public class SimulationTime
 {
-    public int hour;
-    public int minute;
-    public int second;
-    public int day;
-    public int month;
-    public int year;
+    public SimulationTimeClock clock;
+
+    public SimulationTimeDate date;
+    [Space(15)]
+
     public SeasonType seasonType;
+}
+
+[Serializable]
+public struct SimulationTimeDate
+{
+    [Range(1,30)]public int day;
+    [Range(1,12)]public int month;
+    public int year;
+}
+
+[Serializable]
+public struct SimulationTimeClock
+{
+    [Range(1, 24)] public int hour;
+    [Range(1, 60)] public int minute;
+    [Range(1, 60)] public int second;
 }

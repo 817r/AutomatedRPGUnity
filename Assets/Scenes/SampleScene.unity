@@ -200,7 +200,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 431963230}
-  - component: {fileID: 431963229}
+  - component: {fileID: 431963231}
+  - component: {fileID: 431963232}
   m_Layer: 0
   m_Name: Entity
   m_TagString: Untagged
@@ -208,7 +209,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &431963229
+--- !u!4 &431963230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431963228}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &431963231
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -234,33 +250,64 @@ MonoBehaviour:
         Greedy: 0
         Brave: 0
       skillAndStats:
-        talentValues: []
+        Leadership: 10
+        Stealth: 10
+        Strength: 10
+        Intelligence: 10
+        Charisma: 10
+        Endurance: 10
+        Agility: 10
+        Wisdom: 10
       culturalAlignment:
         Religious: 0
         Nationalistic: 0
         Traditional: 0
         Collectivist: 0
       lifeExperienceTraits:
-        lifeEvents: []
+        lifeEvents:
+        - eventName: 
+          eventDescription: 
+          eventDate:
+            clock:
+              hour: 1
+              minute: 1
+              second: 1
+            date:
+              day: 1
+              month: 1
+              year: 0
+            seasonType: 0
     socialTrait:
       Reputation: 0
       Influence: 0
-      relationships: []
---- !u!4 &431963230
-Transform:
+      relationships:
+      - personName: 
+        relationshipType: 0
+        relationshipStrength: 0
+--- !u!114 &431963232
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431963228}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bcac572c7247ae49bea4680a13e84de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  surname: 
+  raceType: 0
+  birthDate:
+    day: 1
+    month: 1
+    year: 0
+  genetics:
+    physicalAppareance:
+      height: 0
+      weight: 0
+    bloodType: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

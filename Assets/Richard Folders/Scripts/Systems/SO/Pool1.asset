@@ -16,9 +16,9 @@ MonoBehaviour:
   - lineage: 0
     characterSpecialities: 0000000008000000
     inateTalents: 0000000007000000
-  - lineage: 1
+  - lineage: 4
     characterSpecialities: 0100000004000000
     inateTalents: 0200000005000000
-  - lineage: 7
+  - lineage: 6
     characterSpecialities: 010000000400000008000000
     inateTalents: 04000000050000000300000000000000
